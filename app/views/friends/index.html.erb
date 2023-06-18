@@ -1,0 +1,9 @@
+<h1>List of all your friends, in one place <3</h1>
+
+<ul>
+  <%=@friends.each do |friend| %>
+  <li>
+    <%= friend.name %>
+  </li>
+    <% end %>
+</ul>
