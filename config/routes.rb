@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
 
   root "friends#index"
+  resources :friends
 
-  get "/friends", to: "friends#index"
-  get "/friends/:id", to: "friends#show"
 end

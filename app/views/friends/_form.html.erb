@@ -1,0 +1,23 @@
+<h1>Add a new friend to your list....</h1>
+
+<%= form_with model: @friend do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @friend.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <%end%>
+  </div>
+
+  <div>
+    <%= form.label :Date_of_friendship %><br>
+    <%= form.text_field :friend_date %>
+    <% @friend.errors.full_messages_for(:friend_date).each do |message| %>
+      <div><%= message %></div>
+    <%end%>
+  </div>
+
+  <div>
+    <%=form.submit %>
+  </div>
+<%end%>

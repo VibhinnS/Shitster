@@ -1,0 +1,10 @@
+<h1> <%= @friend.name %></h1>
+<h3> Friends since - <%= @friend.friend_date %></h3>
+<ul>
+  <li><%= link_to "Go Back To Home Page", root_path%></li>
+  <li><%= link_to "Edit", edit_friend_path(@friend) %></li>
+  <li><%= link_to "Destroy", friend_path(@friend), data: {
+    turbo_method: :delete,
+    turbo_confirm: :"Sure?"
+  } %></li>
+</ul>
